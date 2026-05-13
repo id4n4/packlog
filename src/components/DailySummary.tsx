@@ -19,7 +19,7 @@ export const DailySummary = () => {
     });
   };
   return (
-    <section className="space-y-4">
+    <section className="flex flex-col items-center gap-6 justify-center">
       <DailySummaryForm form={form} handleSubmit={handleSubmit} />
       <DailySummaryView summary={summary} />
     </section>
