@@ -1,6 +1,6 @@
 import z from 'zod';
 
-const DailySummarySchema = z.object({
+export const DailySummarySchema = z.object({
     date: z.date(),
     totalPackages: z.number(),
     totalPudos: z.number(),
