@@ -77,16 +77,42 @@ export const DailySummaryForm: FC<props> = ({ form, handleSubmit }) => {
                 </Field>
               )}
             />
+            <Controller
+              name="totalIncidents"
+              control={form.control}
+              render={({ field: { onChange, value, ...field}, fieldState }) => (
+                <Field data-invalid={fieldState.invalid}>
+                  <FieldLabel htmlFor="form-rhf-demo-title">
+                    Total de incidencias
+                  </FieldLabel>
+                  <Input
+                    {...field}
+                    id="form-rhf-demo-title"
+                    aria-invalid={fieldState.invalid}
+                    placeholder="Total incidencias"
+                    autoComplete="off"
+                    type="number"
+                    onChange={(e) => {                      const value = parseInt(e.target.value, 10);
+                      onChange(isNaN(value) ? undefined : value);
+                    }}
+                    value={value}
+                  />
+                  {fieldState.invalid && (
+                    <FieldError errors={[fieldState.error]} />
+                  )}
+                </Field>
+              )}
+            />
           </FieldGroup>
         </form>
       </CardContent>
       <CardFooter>
-        <Field orientation="horizontal">
+        <Field orientation="horizontal" className="justify-end gap-2">
           <Button type="button" variant="outline" onClick={() => form.reset()}>
-            Reset
+            Reiniciar
           </Button>
           <Button type="submit" form="form-rhf-demo">
-            Submit
+            Generar Resumen
           </Button>
         </Field>
       </CardFooter>

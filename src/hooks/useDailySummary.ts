@@ -10,6 +10,7 @@ export const useDailySummary = () => {
       date: new Date(),
       totalPackages: 0,
       totalPudos: 0,
+      totalIncidents: 0,
     }
   }
   );
