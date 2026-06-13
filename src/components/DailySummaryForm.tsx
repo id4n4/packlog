@@ -108,9 +108,6 @@ export const DailySummaryForm: FC<props> = ({ form, handleSubmit }) => {
       </CardContent>
       <CardFooter>
         <Field orientation="horizontal" className="justify-end gap-2">
-          <Button type="button" variant="outline" onClick={() => form.reset()}>
-            Reiniciar
-          </Button>
           <Button type="submit" form="form-rhf-demo">
             Generar Resumen
           </Button>
