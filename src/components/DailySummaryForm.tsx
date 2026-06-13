@@ -13,7 +13,7 @@ interface props {
 
 export const DailySummaryForm: FC<props> = ({ form, handleSubmit }) => {
   return (
-    <Card className="w-full sm:max-w-md">
+    <Card className="w-full max-w-md">
       <CardHeader>
         <CardTitle className='capitalize' >
           Resumen diario de paquetes

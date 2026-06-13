@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Field } from "./ui/field";
 import { Table, TableBody, TableCell, TableFooter, TableHead, TableHeader, TableRow } from "./ui/table";
+import { toast } from "sonner";
 
 interface Props {
   summary: SummaryDataType | null;
@@ -15,10 +16,11 @@ export const DailySummaryView = ({ summary }: Props) => {
     navigator.clipboard
       .writeText(summaryText)
       .then(() => {
-        alert("Resumen copiado al portapapeles");
+        toast.success("Resumen copiado al portapapeles");
       })
       .catch((err) => {
         console.error("Error al copiar el resumen: ", err);
+        toast.error("Error al copiar el resumen");
       });
   };
   return (
