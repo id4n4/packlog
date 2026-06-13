@@ -128,3 +128,7 @@
     @apply font-sans;
     }
 }
+
+button{
+  @apply cursor-pointer hover:scale-105 transition-transform active:scale-95;
+}

@@ -22,7 +22,7 @@ export const DailySummaryView = ({ summary }: Props) => {
       });
   };
   return (
-    <Card size="sm" className="mx-auto w-full max-w-sm">
+    <Card className="mx-auto w-full max-w-md">
       <CardHeader>
         <Field orientation="horizontal" className="justify-between gap-2">
           <CardTitle>
